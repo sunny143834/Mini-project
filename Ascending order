@@ -1,0 +1,16 @@
+def descending_sort(arr):
+    n = len(arr)
+    i = 0
+    while i < n - 1:
+        j = 0
+        while j < n - 1:
+            if arr[j] < arr[j + 1]:  # Swap if the left element is smaller
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+            j += 1
+        i += 1
+    return arr
+
+# Given list
+arr = [8, 10, 5, 4, 7, 23]
+sorted_arr = descending_sort(arr)
+print("Sorted List in Descending Order:", sorted_arr)
